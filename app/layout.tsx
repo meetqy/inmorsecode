@@ -35,7 +35,13 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head />
+      <head>
+        <script
+          defer
+          data-domain="inmorsecode.fun"
+          src="https://plausible.moyuo.com/js/script.js"
+        ></script>
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased light",
