@@ -5,4 +5,12 @@ export const inLists = [
   "hello world",
   "thank you",
   "good morning",
+  "no",
+  "5948",
+  "help",
+  "help me",
+  "hi",
+  "how to say cool",
+  "cool",
+  "bum",
 ];
