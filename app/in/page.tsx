@@ -1,13 +1,5 @@
+import { inLists } from "@/utils/in-list";
 import { Item } from "./item";
-
-const lists = [
-  "love",
-  "sos",
-  "i love you",
-  "hello world",
-  "thank you",
-  "good morning",
-];
 
 export default function Page() {
   return (
@@ -22,7 +14,7 @@ export default function Page() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {lists.map((item) => (
+        {inLists.map((item) => (
           <Item key={item} item={item} />
         ))}
       </div>

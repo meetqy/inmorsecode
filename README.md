@@ -24,8 +24,8 @@ site: inmorecode.fun
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Run development server
-npm run dev
+pnpm run dev
 ```
