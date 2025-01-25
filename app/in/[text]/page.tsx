@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Content } from "./content";
 
 type Params = Promise<{ text: string }>;
@@ -28,6 +29,18 @@ export default async function MorseCodeDetail({ params }: { params: Params }) {
       </div>
 
       <Content text={text} />
+
+      <div className="mt-12 text-center">
+        <p className="text-lg text-gray-600 dark:text-gray-300">
+          Want to listen to more Morse code?
+        </p>
+        <Link
+          href="/in"
+          className="text-blue-600 dark:text-blue-400 hover:underline"
+        >
+          Go back to the list
+        </Link>
+      </div>
     </div>
   );
 }
