@@ -6,7 +6,7 @@ import { siteConfig } from "@/config/site";
 
 export function Footer() {
   return (
-    <footer className="flex w-full flex-col">
+    <footer className="flex w-full flex-col" id="footer">
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center px-6 py-12 lg:px-8">
         <div className="flex items-center justify-center">
           <span className="font-medium italic font-serif text-primary text-xl">
@@ -18,7 +18,6 @@ export function Footer() {
           {siteConfig.navItems.map((item) => (
             <Link
               key={item.label}
-              isExternal
               className="text-default-500"
               href={item.href}
               size="sm"

@@ -21,6 +21,7 @@ export function Navbar(props: NavbarProps) {
         wrapper: "px-0 w-full justify-center bg-transparent",
       }}
       height="54px"
+      id="navbar"
     >
       <NavbarContent
         className="gap-4 rounded-full border-small border-default-200/20 bg-background/60 px-2 shadow-medium backdrop-blur-md backdrop-saturate-150 dark:bg-default-100/50"

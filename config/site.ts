@@ -17,19 +17,9 @@ export const siteConfig = {
       label: "List",
       href: "/in",
     },
-  ],
-  navMenuItems: [
     {
-      label: "Translator",
-      href: "/",
-    },
-    {
-      label: "To Text",
-      href: "/morse-code-to-text",
-    },
-    {
-      label: "list",
-      href: "/in",
+      label: "Generator of Morse Code",
+      href: "/tool/generator-morse-code-worksheet",
     },
   ],
 };
