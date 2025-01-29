@@ -1,4 +1,5 @@
 export const inLists = [
+  "p",
   "love",
   "sos",
   "i love you",
@@ -28,7 +29,6 @@ export const inLists = [
   "m",
   "n",
   "o",
-  "p",
   "q",
   "r",
   "s",
