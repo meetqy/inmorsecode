@@ -1,14 +1,16 @@
 import Link from "next/link";
 import { Content } from "./content";
+import { textToMorseCode } from "@/utils/morse-code";
 
 type Params = Promise<{ text: string }>;
 
 export const generateMetadata = async ({ params }: { params: Params }) => {
   let { text } = await params;
   text = decodeURIComponent(text);
+  const morseCode = textToMorseCode(text);
 
   return {
-    title: `${text} in Morse Code`,
+    title: `${text} in Morse Code: ${morseCode}`,
     description: `Listen to the rhythmic patterns of the Morse code for ${text}`,
   };
 };
@@ -16,13 +18,18 @@ export const generateMetadata = async ({ params }: { params: Params }) => {
 export default async function MorseCodeDetail({ params }: { params: Params }) {
   let { text } = await params;
   text = decodeURIComponent(text);
+  const morseCode = textToMorseCode(text);
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 space-y-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
           {text} in Morse Code
         </h1>
+        <p className="text-xl font-bold">
+          morse code: "
+          <span className="text-warning  tracking-[0.5em] ">{morseCode}</span>"
+        </p>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
           Listen to the rhythmic patterns of the Morse code
         </p>
